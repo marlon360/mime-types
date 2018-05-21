@@ -47,6 +47,7 @@
     "build-browser": "parcel build index.js --out-dir browser/ --global mime-types --no-source-maps",
     "lint": "eslint .",
     "test": "npm run test-node",
+    "pretest-browser": "npm run build-browser",
     "test-browser": "node_modules/karma/bin/karma start",
     "test-node": "mocha --reporter spec test/test.js",
     "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot test/test.js",
